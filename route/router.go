@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/e-harsley/go-mycore/service"
-	"github.com/e-harsley/go-mycore/utils"
+	"github.com/e-harsley/gin-mycore/service"
+	"github.com/e-harsley/gin-mycore/utils"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
