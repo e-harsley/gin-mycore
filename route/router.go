@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/e-harsley/gin-mycore/service"
-	"github.com/e-harsley/gin-mycore/utils"
+	"github.com/e-harsley/go-mycore/service"
+	"github.com/e-harsley/go-mycore/utils"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -78,7 +78,7 @@ func WrapRouter(router *gin.Engine, urlPath string, controller interface{}, limi
 				return
 			}
 		} else {
-			utils.RaiseException(ctx, "Serializer has not schema request")
+			utils.RaiseException(ctx, "Serializer has no schema request")
 			return
 		}
 		handler := reflect.ValueOf(controller)

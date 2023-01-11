@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	constant "github.com/e-harsley/gin-mycore/constants"
+	constant "github.com/e-harsley/go-mycore/constants"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator"
 	"github.com/segmentio/fasthash/fnv1a"
@@ -281,7 +281,7 @@ func BindToMap(ctx *gin.Context, us interface{}) (map[string]interface{}, error)
 			// Handle binding error
 
 			RaiseException(ctx, err.Error())
-			return nil, nil
+			return nil, err
 		}
 		val = ptr.Elem()
 	}
