@@ -12,7 +12,7 @@ import (
 
 	constant "github.com/e-harsley/gin-mycore/constants"
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 	"github.com/segmentio/fasthash/fnv1a"
 )
 
