@@ -74,7 +74,7 @@ func WrapRouter(router *gin.Engine, urlPath string, controller interface{}, limi
 		if serializer, ok := serializers["Request"]; ok {
 			data, err = utils.BindToMap(ctx, serializer)
 			if err != nil {
-				utils.RaiseException(ctx, err.Error())
+				ctx.JSON(http.StatusUnprocessableEntity, utils.NewValidatorError(err))
 				return
 			}
 		} else {
