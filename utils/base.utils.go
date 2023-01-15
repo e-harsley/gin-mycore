@@ -16,6 +16,7 @@ import (
 	"gopkg.in/go-playground/validator.v9"
 )
 
+// skk
 type DataOperation struct {
 	Success bool        `json:"success"`
 	Message string      `json:"message"`
